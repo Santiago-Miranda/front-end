@@ -60,7 +60,7 @@
     justify-content: center;
     width: 100%;
     height: 95%;
-    outline: 3px solid #000;
+    border: 4px solid #000;
     border-radius: 5px;
 }
 .c-c-img div{
