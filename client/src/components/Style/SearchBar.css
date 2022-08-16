@@ -21,6 +21,7 @@
     width: 550px;
 }
 .cont-searchbar form button{
+    cursor: pointer;
     margin-right: 20px;
     height: 50px;
     width: 50px;
