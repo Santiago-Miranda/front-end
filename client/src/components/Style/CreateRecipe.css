@@ -7,6 +7,10 @@
     --font-primary: 'Montserrat', sans-serif;
 }
 
+.btn{
+    cursor: pointer;
+}
+
 #container-createrecipe{
     font-family: var(--font-primary);
     margin: 0;
@@ -21,6 +25,7 @@
 } */
 
 #cont-btn-home a button{
+    cursor: pointer;
     font-size: 1em;
     font-weight: bold;
     margin: 25px;
@@ -149,6 +154,7 @@
     margin: 10px;
 }
 #form-cont-right button{
+    cursor: pointer;
     font-size: 1.1em;
     font-weight: bold;
     margin: 10px;
