@@ -20,6 +20,8 @@
     background-repeat: no-repeat;
 }
 
+
+
 .card-nav{
     display: flex;
     flex-direction: row;
@@ -34,6 +36,7 @@
     width: 23%;
 }
 .card-nav-button a button{
+    cursor: pointer;
     font-size: .7em;
     height: 40px;
     width: 250px;
@@ -135,6 +138,7 @@
 }
 #btn-data{
     color: var(--color-primary);
+    cursor: pointer;
     background-color: var(--color-secundary);
     font-size: 1em;
     font-weight: bold;
