@@ -2,7 +2,7 @@ import { useState } from 'react'
 import {useDispatch} from 'react-redux'
 import {getRecipesByName} from '../actions'
 import './Style/SearchBar.css'
-import s from './img/pngwing.png'
+import lupita from './img/pngwing.png'
 
 export default function SearchBar(){
     const dispatch = useDispatch();
@@ -22,7 +22,7 @@ export default function SearchBar(){
     return(
         <div className='cont-searchbar'>
             <form onSubmit={(e)=>{handleSubmit(e)}} >
-                <button type='submit'><img src={s}/></button>
+                <button type='submit'><img src={lupita}/></button>
                 <input value={input} onChange={(e)=>{handleChange(e)}} placeholder='Busca una receta...'/>
             </form>
         </div>
