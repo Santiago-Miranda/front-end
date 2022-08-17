@@ -37,16 +37,6 @@ export function getRecipesById(id){
         })
     }
 }
-export function deleteRecipe(id){
-    return async function(dispatch){
-        await axios.delete(`recipe/${id}`)
-        dispatch({
-            type: "DEL_RECIPE",
-            payload: id
-        })
-    }
-}
-
 export function filterByDiets(payload){
     return {
         type: 'FILTER_BY_DIETS',
