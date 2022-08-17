@@ -134,20 +134,7 @@ export default function CreateRecipe(){
         }
         )}
     }
-     function deletePaso(pos){
-         let obj = {...indexPaso}
-         delete obj[pos]
-         setIndexPaso(obj)
-         let pasitos = []
-         for(let i=0;i<cantP;i++){
-             pasitos.push(obj[i])
-         }
-         setCantP(cantP-1)
-         setInputForm({
-             ...inputForm,
-             pasos: pasitos
-         }
-     )}
+    
     
     return(
         <div id='container-createrecipe'>
@@ -248,8 +235,7 @@ export default function CreateRecipe(){
                 </div>
                 <div id='form-cont-right'>
                     <label>Pasos para la preparacion (Max 13):</label>
-                    <button onClick={()=>{addPaso()}}>Añadir paso</button>
-                    <button onClick={()=>{deletePaso()}}>Eliminar paso</button> 
+                    <button onClick={()=>{addPaso()}}>Añadir paso</button> 
                     <button className="btn" type="submit" >Crear receta</button>
                     
                     {
