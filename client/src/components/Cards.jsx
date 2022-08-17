@@ -1,11 +1,8 @@
 import {Link} from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import { deleteRecipe } from '../actions'
 import './Style/Cards.css'
 import imgDefault from './img/loading.png'
 
 export default function Cards({id,image,name,nivelSalubre}){
-    const dispatch = useDispatch()
 
     const styleImg = {
         backgroundImage: `url(${image? image : imgDefault})`,
@@ -18,12 +15,7 @@ export default function Cards({id,image,name,nivelSalubre}){
     return(
         <div key={id} className='cards-container'>
             <p>Nivel saludable: {nivelSalubre}
-            {
-                id && id.length > 10?
-                <button onClick={()=>{dispatch(deleteRecipe(id))}}>X</button>
-                :
-                <></>
-            }
+           
             </p>
             <Link to={`/recipe/${id}`}>
                 <div className='c-c-img' style={styleImg}>
