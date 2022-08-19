@@ -60,3 +60,12 @@ export function createRecipe(payload){
         await axios.post('recipe',payload)
     }
 }
+export function deleteRecipe(id){
+    return async function(dispatch){
+        await axios.delete(`/recipe/${id}`)
+        dispatch({
+            type: "DEL_RECIPE",
+            payload: id
+        })
+    }
+}
