@@ -19,10 +19,6 @@ export default function CreateRecipe(){
         pasos: [],
         diets: []
     })
-    
-    // console.log(inputForm.pasos)
-    // console.log(inputForm.pasos)
-    // console.log('pasitos: ',pasitos)
 
     useEffect(()=>{
         dispatch(getAllDiets())
@@ -61,6 +57,7 @@ export default function CreateRecipe(){
             [e.target.name] : e.target.value
         }))
     } 
+    
     function handleSelect(e){
         setInputForm({
             ...inputForm,
@@ -71,6 +68,7 @@ export default function CreateRecipe(){
             diets : [...inputForm.diets,e.target.value]
         }))
     } 
+    
     function deleteSelect(e,id){
         e.preventDefault();
         setInputForm({
@@ -118,6 +116,7 @@ export default function CreateRecipe(){
             pasos: pasitos2
         })
     } 
+    
     function addPaso(){
         let pasitos = []
         if(cantP <=13){setIndexPaso({
@@ -133,6 +132,21 @@ export default function CreateRecipe(){
             pasos: pasitos
         }
         )}
+    }
+    
+     function deletePaso(pos){
+        let obj = {...indexPaso}
+        delete obj[pos]
+        setIndexPaso(obj)
+        let pasitos = []
+        for(let i = 0; i < cantP; i++){
+            pasitos.push(obj[i])
+        }
+        setCantP(cantP - 1)
+        setInputForm({
+            ...inputForm,
+            pasos: pasitos
+        })
     }
     
     
