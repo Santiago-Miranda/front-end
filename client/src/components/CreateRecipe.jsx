@@ -250,6 +250,7 @@ export default function CreateRecipe(){
                 <div id='form-cont-right'>
                     <label>Pasos para la preparacion (Max 13):</label>
                     <button onClick={()=>{addPaso()}}>Añadir paso</button> 
+                    <button onClick={()=>{deletePaso()}}>Eliminar paso</button>
                     <button className="btn" type="submit" >Crear receta</button>
                     
                     {
