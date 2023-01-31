@@ -19,7 +19,7 @@ export default function Card({recipe}){
                 <div className="card-nav-button">
                     <Link to='/home'>
                         <button>
-                            <h1>VOLVER AL MENÚ</h1>
+                            <h1>VOLVER</h1>
                         </button>
                     </Link>
                 </div>
@@ -29,7 +29,7 @@ export default function Card({recipe}){
             </div>
             <div className="card-line-data">
                 <p>Nivel saludable: {recipe.nivelSalubre}</p>
-                <p>Tipo de plato: {recipe.tipoDePlato}</p>
+                <p>Tipo de plato: {recipe.tipoDePlato?.join(', ')}</p>
                 <p>Dieta/s: {recipe.diets?.join(', ')}.</p>
             </div>
             <div className="card-cont-img-data">
